@@ -393,7 +393,8 @@ header {
   background-position: center;
   background-size: cover;
   position: absolute;
-  width: 50%;
+  width: 100%;
+  max-width: 66rem;
   height: 61%;
   bottom: -8rem;
   left: 0;

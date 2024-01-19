@@ -47,7 +47,7 @@ header {
 .header::after {
   content: "";
   position: absolute;
-  background: url(/images/header/blob-haikei.png) no-repeat;
+  background: url(/image/header/blob-haikei.png) no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -59,7 +59,7 @@ header {
 .header::before {
   content: "";
   position: absolute;
-  background: url(/images/header/wave1.svg) no-repeat;
+  background: url(/image/header/wave1.svg) no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -389,7 +389,7 @@ header {
 }
 .footer::before {
   content: "";
-  background: url(../images/footer/footer_wave.png) no-repeat;
+  background: url(../image/footer/footer_wave.png) no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -478,10 +478,10 @@ header {
   transition: all 1s ease;
 }
 .linkedin-item:hover img {
-  content: url("../images/app/linkedin-blue.png");
+  content: url("../image/app/linkedin-blue.png");
 }
 .github-item:hover img {
-  content: url("../images/app/github-blue.png");
+  content: url("../image/app/github-blue.png");
 }
 /* Responsive Menu */
 .menu-responsive {

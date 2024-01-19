@@ -365,7 +365,9 @@ header {
   height: 100%;
 }
 .wrapper-text {
-  padding: 0 7rem 0 7rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
 }
 .wrapper-icon-row {
   display: flex;

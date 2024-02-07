@@ -61,7 +61,6 @@ let calcScrollValue = () => {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   const scrollGradientPercentage = (scrollTopPosition * 100) / calcHeight;
-  console.log(scrollGradientPercentage);
   scrollTop.style.display = scrollTopPosition > 100 ? "grid" : "none";
   scrollTop.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;

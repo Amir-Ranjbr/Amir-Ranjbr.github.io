@@ -1,13 +1,12 @@
 # Amir-Ranjbr.github.io
 
 <div align="center">
-  <img src="./image/preview/preview-descktop.png" alt="Thumbnail1">
+  <img src="./image/preview/preview-3-devices.png" alt="Preview 3 Devices">
   <br>
   <br>
   <br>
-      <img src="./image/preview/preview-mobile.png" alt="Thumbnail2">
+  <img src="./image/preview/preview-desktop.png" alt="Preview Scroll">
   <br>
   <br>
-   <img src="./image/preview/preview-mobile-menu.png" alt="Thumbnail3">
   <p>Thank You!</p>
 </div>

@@ -70,27 +70,29 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
-// Open menu
-document.querySelector(".menu-bars-btn").addEventListener("click", function () {
-  let menu = document.querySelector(".menu-responsive");
-  menu.style.top = "1rem";
-  menu.style.opacity = "1";
+
+// Menu Options
+const menuBtn = document.querySelector(".menu-bars-btn");
+const menu = document.querySelector(".menu-responsive");
+
+// Open or close menu
+menuBtn.addEventListener("click", function () {
+  menu.classList.toggle("active");
+  menuBtn.classList.toggle("visibility");
 });
+
 // Close menu in click
 document
   .querySelector(".menu-times-btn")
   .addEventListener("click", function () {
-    let menu = document.querySelector(".menu-responsive");
-    menu.style.top = "-100%";
-    menu.style.opacity = "0";
+    menu.classList.remove("active");
+    menuBtn.classList.toggle("visibility");
   });
 
 // Close menu without click
 document.addEventListener("mousedown", function (event) {
-  let menu = document.querySelector(".menu-responsive");
-  let menuBtn = document.querySelector(".menu-bars-btn");
   if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
-    menu.style.top = "-100%";
-    menu.style.opacity = "0";
+    menu.classList.remove("active");
+    menuBtn.classList.remove("visibility");
   }
 });

@@ -1,19 +1,31 @@
 "use strict";
-// Scroll
-document
-  .querySelector(".header__left-scroll")
-  .addEventListener("click", function () {
-    const scrollAmount = window.innerHeight;
-    window.scroll({
-      top: window.scrollY + scrollAmount,
-      behavior: "smooth",
-    });
-  });
-
-// Transiton
+const headerScroll = document.querySelector(".header__left-scroll");
+const mainProject = document.querySelector(".main__projects");
 const elements = document.querySelectorAll(".main__projects");
 const windowHeight = window.innerHeight;
-
+const projectNavBar = document.querySelector(".projects");
+const aboutNavBar = document.querySelector(".about");
+const contactNavBar = document.querySelector(".contact");
+const mainAbout = document.querySelector(".main-bottom-wrapper");
+const footerTop = document.querySelector(".footer-top");
+// Scroll Section
+// Scroll To Project , About , Contact
+const scrollToProject = function (e) {
+  mainProject.scrollIntoView({ behavior: "smooth" });
+};
+const scrollToAbout = function (e) {
+  mainAbout.scrollIntoView({ behavior: "smooth" });
+};
+const scrollToContact = function (e) {
+  footerTop.scrollIntoView({ behavior: "smooth" });
+};
+// Btn Scroll Down
+headerScroll.addEventListener("click", scrollToProject);
+// Project  , About , Contact Navbar AddEventListener
+projectNavBar.addEventListener("click", scrollToProject);
+aboutNavBar.addEventListener("click", scrollToAbout);
+contactNavBar.addEventListener("click", scrollToContact);
+// Transition
 function fadeInElementsOnScroll() {
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
@@ -53,7 +65,7 @@ function scrollToSection(sectionId) {
   section.scrollIntoView({ behavior: "smooth" });
 }
 // Scroll to top
-let calcScrollValue = () => {
+const calcScrollValue = () => {
   const scrollTop = document.querySelector(".scrollTop");
   const scrollTopValue = document.querySelector(".scrollTop-value");
   const scrollTopPosition = document.documentElement.scrollTop;
@@ -71,10 +83,11 @@ let calcScrollValue = () => {
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
-// Menu Options
+// Menu Event
 const menuBtn = document.querySelector(".menu-bars-btn");
-const menu = document.querySelector(".menu-responsive");
-
+const menu = document.querySelector(".menu");
+const closeMenu = document.querySelector(".menu-times-btn");
+console.log(menu);
 // Open or close menu
 menuBtn.addEventListener("click", function () {
   menu.classList.toggle("active");
@@ -82,12 +95,11 @@ menuBtn.addEventListener("click", function () {
 });
 
 // Close menu in click
-document
-  .querySelector(".menu-times-btn")
-  .addEventListener("click", function () {
-    menu.classList.remove("active");
-    menuBtn.classList.toggle("visibility");
-  });
+
+closeMenu.addEventListener("click", function () {
+  menu.classList.remove("active");
+  menuBtn.classList.toggle("visibility");
+});
 
 // Close menu without click
 document.addEventListener("mousedown", function (event) {

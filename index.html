@@ -6,7 +6,13 @@
     <link rel="icon" href="../image/favicon/favicon.ico" />
     <link rel="stylesheet" href="styles/app.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Amir Ranjbr</title>
   </head>
   <body>
@@ -16,52 +22,36 @@
       </span>
     </div>
     <header class="header">
-      <div class="menu-responsive">
-        <div class="menu-times-btn">
-          <img src="../image/header/close.png" alt="close menu">
-        </div>
-        <ul class="menu-r">
-          <li class="menu_links-r">
-            <a  class="menu_link-r" onclick="scrollToSection('main-top')" >Projects</a>
-          </li>
-          <li class="menu_links-r"><a  onclick="scrollToSection('main-bottom')" class="menu_link-r">About</a></li>
-          <li class="menu_links-r">
-            <a class="menu_link-r" onclick="scrollToSection('footer-bottom')" >Contact</a>
-          </li>
-        </ul>
-        <div class="menu__btn-r">
-          <button class="menu__btn-button-r">
-            <a
-              href="https://www.linkedin.com/in/amir-ranjbar/"
-              target="_blank"
-              >Resume</a
-            >
-          </button>
-        </div>
-      </div>
       <div class="container">
         <div class="header-top p2">
           <div class="nav__logo">
             <img src="../image/favicon/favicon-32x32.png" alt="logo" />
           </div>
-          <ul class="menu ">
-            <li class="menu_links">
-              <a  class="menu_link" onclick="scrollToSection('main-top')" >Projects</a>
-            </li>
-            <li class="menu_links"><a  onclick="scrollToSection('main-bottom')" class="menu_link">About</a></li>
-            <li class="menu_links">
-              <a  onclick="scrollToSection('footer-bottom')" class="menu_link">Contact</a>
-            </li>
+          <ul class="menu">
+            <div class="menu__wrapper">
+              <div class="menu-times-btn">
+                <i class="fa-solid fa-times"></i>
+              </div>
+              <li class="menu_links projects">
+                <a class="menu_link">Projects</a>
+              </li>
+              <li class="menu_links about">
+                <a class="menu_link">About</a>
+              </li>
+              <li class="menu_links contact">
+                <a class="menu_link">Contact</a>
+              </li>
+            </div>
+            <div class="menu__btn">
+              <button class="menu__btn-button">
+                <a
+                  href="https://www.linkedin.com/in/amir-ranjbar/"
+                  target="_blank"
+                  >Resume</a
+                >
+              </button>
+            </div>
           </ul>
-          <div class="menu__btn">
-            <button class="menu__btn-button">
-              <a
-                href="https://www.linkedin.com/in/amir-ranjbar/"
-                target="_blank"
-                >Resume</a
-              >
-            </button>
-          </div>
           <div class="menu-bars-btn">
             <i class="fa-solid fa-bars"></i>
           </div>
@@ -69,7 +59,10 @@
         <div class="header-bottom p2">
           <div class="header-bottom-left">
             <h1 class="header-bottom-title one-title">Hi, I'm Amir.</h1>
-            <h1 class="header-bottom-title two-title">Hi, I'm <br> Amir.</h1>
+            <h1 class="header-bottom-title two-title">
+              Hi, I'm <br />
+              Amir.
+            </h1>
             <ul class="dynamic-txts">
               <li><span>A Trainee Developer.</span></li>
               <li><span>A problem solver.</span></li>
@@ -100,124 +93,133 @@
         </div>
       </div>
     </header>
-    <main class="main" >
+    <main class="main">
       <div class="container">
         <div class="main-top" id="main-top">
           <div class="main__title p2"><h2>Projects</h2></div>
           <div class="main__project-wrapper">
-          <div class="main__projects p2">
-            <div class="project__section-left">
-              <img src="../image/project/thumbnail-host.png" alt="Template" />
-            </div>
-            <div class="project__section-right p2">
-              <h3 class="section-right-title">Hosting Project</h3>
-              <p class="section-right-txt">
-                Our website offers reliable and secure hosting solutions for individuals and businesses. We provide user-friendly interfaces and a range of services including shared hosting, VPS hosting, and dedicated servers.
-              </p>
-              <div class="section-right-tags">
-                <p class="right-tags-tag">HTML</p>
-                <p class="right-tags-tag">CSS</p>
-                <p class="right-tags-tag">JavaScript</p>
+            <div class="main__projects p2">
+              <div class="project__section-left">
+                <img src="../image/project/thumbnail-host.png" alt="Template" />
               </div>
-              <button class="right-btn"><a href="https://amir-ranjbr.github.io/hosting-project/" target="_blank">Demo ➜</a></button>
-            </div>
-          </div>
-          <div class="main__projects p2">
-            <div class="project__section-left">
-              <img src="../image/project/template.png" alt="Template" />
-            </div>
-            <div class="project__section-right p2">
-              <h3 class="section-right-title">Project Name</h3>
-              <p class="section-right-txt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, illum?
-              </p>
-              <div class="section-right-tags">
-                <p class="right-tags-tag">React</p>
-                <p class="right-tags-tag">Firebase</p>
-              </div>
-              <button class="right-btn"><a href="#">Demo ➜</a></button>
-            </div>
-          </div>
-          <div class="main__projects p2">
-            <div class="project__section-left">
-              <img src="../image/project/template.png" alt="Template" />
-            </div>
-            <div class="project__section-right p2">
-              <h3 class="section-right-title">Project Name</h3>
-              <p class="section-right-txt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, illum?
-              </p>
-              <div class="section-right-tags">
-                <p class="right-tags-tag">HTML</p>
-                <p class="right-tags-tag">CSS</p>
-                <p class="right-tags-tag">NodeJs</p>
-                <p class="right-tags-tag">TMongoDB</p>
-                <p class="right-tags-tag">Socketlo</p>
-              </div>
-              <div class="btn-wrapper">
-                <button class="right-btn github-btn">
-                  <a href="https://github.com/Amir-Ranjbr" target="_blank"
-                    >Github</a
+              <div class="project__section-right p2">
+                <h3 class="section-right-title">Hosting Project</h3>
+                <p class="section-right-txt">
+                  Our website offers reliable and secure hosting solutions for
+                  individuals and businesses. We provide user-friendly
+                  interfaces and a range of services including shared hosting,
+                  VPS hosting, and dedicated servers.
+                </p>
+                <div class="section-right-tags">
+                  <p class="right-tags-tag">HTML</p>
+                  <p class="right-tags-tag">CSS</p>
+                  <p class="right-tags-tag">JavaScript</p>
+                </div>
+                <button class="right-btn">
+                  <a
+                    href="https://amir-ranjbr.github.io/hosting-project/"
+                    target="_blank"
+                    >Demo ➜</a
                   >
                 </button>
+              </div>
+            </div>
+            <div class="main__projects p2">
+              <div class="project__section-left">
+                <img src="../image/project/template.png" alt="Template" />
+              </div>
+              <div class="project__section-right p2">
+                <h3 class="section-right-title">Project Name</h3>
+                <p class="section-right-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, illum?
+                </p>
+                <div class="section-right-tags">
+                  <p class="right-tags-tag">React</p>
+                  <p class="right-tags-tag">Firebase</p>
+                </div>
                 <button class="right-btn"><a href="#">Demo ➜</a></button>
               </div>
             </div>
+            <div class="main__projects p2">
+              <div class="project__section-left">
+                <img src="../image/project/template.png" alt="Template" />
+              </div>
+              <div class="project__section-right p2">
+                <h3 class="section-right-title">Project Name</h3>
+                <p class="section-right-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, illum?
+                </p>
+                <div class="section-right-tags">
+                  <p class="right-tags-tag">HTML</p>
+                  <p class="right-tags-tag">CSS</p>
+                  <p class="right-tags-tag">NodeJs</p>
+                  <p class="right-tags-tag">TMongoDB</p>
+                  <p class="right-tags-tag">Socketlo</p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="right-btn github-btn">
+                    <a href="https://github.com/Amir-Ranjbr" target="_blank"
+                      >Github</a
+                    >
+                  </button>
+                  <button class="right-btn"><a href="#">Demo ➜</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="main__projects p2">
+              <div class="project__section-left">
+                <img src="../image/project/template.png" alt="Template" />
+              </div>
+              <div class="project__section-right p2">
+                <h3 class="section-right-title">Project Name</h3>
+                <p class="section-right-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, illum?
+                </p>
+                <div class="section-right-tags">
+                  <p class="right-tags-tag">ReactJs</p>
+                  <p class="right-tags-tag">NodeJs</p>
+                  <p class="right-tags-tag">MongoDB</p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="right-btn github-btn">
+                    <a href="https://github.com/Amir-Ranjbr" target="_blank"
+                      >Github</a
+                    >
+                  </button>
+                  <button class="right-btn"><a href="#">Demo ➜</a></button>
+                </div>
+              </div>
+            </div>
+            <div class="main__projects p2">
+              <div class="project__section-left">
+                <img src="../image/project/template.png" alt="Template" />
+              </div>
+              <div class="project__section-right p2">
+                <h3 class="section-right-title">Project Name</h3>
+                <p class="section-right-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Asperiores, illum?
+                </p>
+                <div class="section-right-tags">
+                  <p class="right-tags-tag">Python</p>
+                  <p class="right-tags-tag">flask</p>
+                  <p class="right-tags-tag">NodeJs</p>
+                  <p class="right-tags-tag">MogoDb</p>
+                </div>
+                <div class="btn-wrapper">
+                  <button class="right-btn github-btn">
+                    <a href="https://github.com/Amir-Ranjbr" target="_blank"
+                      >Github</a
+                    >
+                  </button>
+                  <button class="right-btn"><a href="">Demo ➜</a></button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="main__projects p2">
-            <div class="project__section-left">
-              <img src="../image/project/template.png" alt="Template" />
-            </div>
-            <div class="project__section-right p2">
-              <h3 class="section-right-title">Project Name</h3>
-              <p class="section-right-txt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, illum?
-              </p>
-              <div class="section-right-tags">
-                <p class="right-tags-tag">ReactJs</p>
-                <p class="right-tags-tag">NodeJs</p>
-                <p class="right-tags-tag">MongoDB</p>
-              </div>
-              <div class="btn-wrapper">
-                <button class="right-btn github-btn">
-                  <a href="https://github.com/Amir-Ranjbr" target="_blank"
-                    >Github</a
-                  >
-                </button>
-                <button class="right-btn"><a href="#">Demo ➜</a></button>
-              </div>
-            </div>
-          </div>
-          <div class="main__projects p2">
-            <div class="project__section-left">
-              <img src="../image/project/template.png" alt="Template" />
-            </div>
-            <div class="project__section-right p2">
-              <h3 class="section-right-title">Project Name</h3>
-              <p class="section-right-txt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, illum?
-              </p>
-              <div class="section-right-tags">
-                <p class="right-tags-tag">Python</p>
-                <p class="right-tags-tag">flask</p>
-                <p class="right-tags-tag">NodeJs</p>
-                <p class="right-tags-tag">MogoDb</p>
-              </div>
-              <div class="btn-wrapper">
-                <button class="right-btn github-btn">
-                  <a href="https://github.com/Amir-Ranjbr" target="_blank"
-                    >Github</a
-                  >
-                </button>
-                <button class="right-btn"><a href="">Demo ➜</a></button>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
         <div class="main-bottom p2" id="main-bottom">
           <div class="main-bottom-title p2"><h2>About Me</h2></div>
@@ -386,10 +388,29 @@
                   <p>Figma</p>
                 </div>
                 <div class="icon">
-                  <img
-                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
-                    alt="TailwindCSS "
-                  />
+                  <svg
+                    height="50"
+                    preserveAspectRatio="xMidYMid"
+                    viewBox="0 0 256 154"
+                    width="50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <linearGradient
+                      id="a"
+                      x1="-2.777778%"
+                      x2="100%"
+                      y1="32%"
+                      y2="67.555556%"
+                    >
+                      <stop offset="0" stop-color="#2298bd" />
+                      <stop offset="1" stop-color="#0ed7b5" />
+                    </linearGradient>
+                    <path
+                      d="m128 0c-34.1333333 0-55.4666667 17.0666667-64 51.2 12.8-17.0666667 27.7333333-23.4666667 44.8-19.2 9.737481 2.4343704 16.697363 9.4985481 24.401067 17.3184 12.549689 12.7383704 27.07437 27.4816 58.798933 27.4816 34.133333 0 55.466667-17.0666667 64-51.2-12.8 17.0666667-27.733333 23.4666667-44.8 19.2-9.737481-2.4343704-16.697363-9.4985481-24.401067-17.3184-12.549689-12.7383704-27.07437-27.4816-58.798933-27.4816zm-64 76.8c-34.1333333 0-55.46666667 17.0666667-64 51.2 12.8-17.066667 27.7333333-23.466667 44.8-19.2 9.7374815 2.43437 16.697363 9.498548 24.4010667 17.3184 12.5496889 12.73837 27.0743703 27.4816 58.7989333 27.4816 34.133333 0 55.466667-17.066667 64-51.2-12.8 17.066667-27.733333 23.466667-44.8 19.2-9.737481-2.43437-16.697363-9.498548-24.401067-17.3184-12.549689-12.7383704-27.07437-27.4816-58.798933-27.4816z"
+                      fill="url(#a)"
+                    />
+                  </svg>
                   <p>TailwindCSS</p>
                 </div>
                 <div class="icon">
@@ -414,7 +435,12 @@
           <div class="footer-bottom p2" id="footer-bottom">
             <div class="footer-bottom-left">
               <p class="email-mail">am.ranjbr.ir@gmail.com</p>
-              <img id="copy-button" class="email-copy-img" src="../image/footer/copy.png" alt="copy">
+              <img
+                id="copy-button"
+                class="email-copy-img"
+                src="../image/footer/copy.png"
+                alt="copy"
+              />
             </div>
             <div class="footer-bottom-right">
               <button class="email-btn">
@@ -425,33 +451,33 @@
                   >Send Email</a
                 >
               </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer-icon ">
-        <ul class="footer-icon-items" >
-          <li class="item">
-            <a
-              class="linkedin-item"
-              href="https://www.linkedin.com/in/amir-ranjbar/"
-              target="_blank"
-            >
-            <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="item">
-            <a
-              class="github-item"
-              href="https://github.com/Amir-Ranjbr"
-              target="_blank"
-            >
-            <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-        </ul>
+        <div class="footer-icon">
+          <ul class="footer-icon-items">
+            <li class="item">
+              <a
+                class="linkedin-item"
+                href="https://www.linkedin.com/in/amir-ranjbar/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li class="item">
+              <a
+                class="github-item"
+                href="https://github.com/Amir-Ranjbr"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
-    
-    <script  src="scripts/app.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>

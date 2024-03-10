@@ -2,10 +2,6 @@
 const headerScroll = document.querySelector(".header__left-scroll");
 const mainProject = document.querySelector(".main__projects");
 const elements = document.querySelectorAll(".main__projects");
-const windowHeight = window.innerHeight;
-const projectNavBar = document.querySelector(".projects");
-const aboutNavBar = document.querySelector(".about");
-const contactNavBar = document.querySelector(".contact");
 const mainAbout = document.querySelector(".main-bottom-wrapper");
 const footerTop = document.querySelector(".footer-top");
 const menuWrapper = document.querySelector(".menu__wrapper");
@@ -18,23 +14,16 @@ menuWrapper.addEventListener("click", function (e) {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
-const scrollToProject = function (e) {
-  mainProject.scrollIntoView({ behavior: "smooth" });
-};
-const scrollToAbout = function (e) {
-  mainAbout.scrollIntoView({ behavior: "smooth" });
-};
-const scrollToContact = function (e) {
-  footerTop.scrollIntoView({ behavior: "smooth" });
-};
 // Btn Scroll Down
-headerScroll.addEventListener("click", scrollToProject);
+headerScroll.addEventListener("click", function (e) {
+  mainProject.scrollIntoView({ behavior: "smooth" });
+});
 
 // Transition
 function fadeInElementsOnScroll() {
   elements.forEach((element) => {
     const elementTop = element.getBoundingClientRect().top;
-
+    const windowHeight = window.innerHeight;
     if (elementTop < windowHeight) {
       setTimeout(() => {
         element.style.opacity = 1;

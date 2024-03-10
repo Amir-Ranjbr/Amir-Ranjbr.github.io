@@ -8,8 +8,16 @@ const aboutNavBar = document.querySelector(".about");
 const contactNavBar = document.querySelector(".contact");
 const mainAbout = document.querySelector(".main-bottom-wrapper");
 const footerTop = document.querySelector(".footer-top");
+const menuWrapper = document.querySelector(".menu__wrapper");
 // Scroll Section
 // Scroll To Project , About , Contact
+menuWrapper.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains("menu_link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
 const scrollToProject = function (e) {
   mainProject.scrollIntoView({ behavior: "smooth" });
 };
@@ -21,10 +29,7 @@ const scrollToContact = function (e) {
 };
 // Btn Scroll Down
 headerScroll.addEventListener("click", scrollToProject);
-// Project  , About , Contact Navbar AddEventListener
-projectNavBar.addEventListener("click", scrollToProject);
-aboutNavBar.addEventListener("click", scrollToAbout);
-contactNavBar.addEventListener("click", scrollToContact);
+
 // Transition
 function fadeInElementsOnScroll() {
   elements.forEach((element) => {
@@ -87,7 +92,6 @@ window.onload = calcScrollValue;
 const menuBtn = document.querySelector(".menu-bars-btn");
 const menu = document.querySelector(".menu");
 const closeMenu = document.querySelector(".menu-times-btn");
-console.log(menu);
 // Open or close menu
 menuBtn.addEventListener("click", function () {
   menu.classList.toggle("active");

@@ -339,9 +339,11 @@ header {
 }
 
 .main__projects {
+  transition: all 0.5s;
+}
+.section--hidden {
   opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 1s, transform 1s;
+  transform: translateX(-10rem);
 }
 /* main bottom */
 
